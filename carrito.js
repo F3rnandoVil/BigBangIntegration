@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartItems.forEach((item, index) => {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
+            const totalPrice = item.precio * item.cantidad;
             cartItem.innerHTML = `
                 <div>${item.producto}</div>
                 <div>${item.descripcion}</div>
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <input type="number" value="${item.cantidad}" min="1" readonly>
                     <button onclick="increaseQuantity(${index})">+</button>
                 </div>
-                <div>$${item.precio.toFixed(2)}</div>
+                <div>$${totalPrice.toFixed(2)}</div>
                 <button class="cart-item-remove" onclick="removeItem(${index})">Eliminar</button>
             `;
             cartItemsContainer.appendChild(cartItem);
