@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "producto": "Coca Cola",
+        "cantidad": 10000,
+        "descripcion": "Negra",
+        "precio": 10,
+        "imagen": "https://arteli.vtexassets.com/arquivos/ids/252176-800-auto?v=638635791430130000&width=800&height=auto&aspect=true"
+    },
+    {
+        "id": 2,
+        "producto": "Coca Cola 2",
+        "cantidad": 10000,
+        "descripcion": "Negra 2",
+        "precio": 10,
+        "imagen": "https://arteli.vtexassets.com/arquivos/ids/252176-800-auto?v=638635791430130000&width=800&height=auto&aspect=true"
+    },
+    {
+        "id": 3,
+        "producto": "Diego Flores",
+        "cantidad": 1,
+        "descripcion": "NO SABE C++ 🥶",
+        "precio": 0,
+        "imagen": "https://www.juandiegoflorez.com/userfiles/photos/Shooting-2017/_1280x1340_crop_center-center_none/20170319_JD_Florez_Sony_motiv1_0200vers2_end.jpg"
+    }
+]
