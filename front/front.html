@@ -262,7 +262,8 @@
             font-size: 0.9rem;
             color: #555;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            line-clamp: 3;
+            -webkit-line-clamp: 3; /* pa Safari */
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -522,7 +523,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Elegance<span>.</span></a>
+            <a href="#" class="logo">A<span>.</span></a>
             <nav>
                 <ul>
                     <li>
@@ -572,7 +573,7 @@
             <!-- Product 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    <img src="/api/placeholder/400/320" alt="Product image">
+                    <img src="/api/placeholder/400" alt="Product image">
                     <div class="product-badge">NUEVO</div>
                 </div>
                 <div class="product-info">
