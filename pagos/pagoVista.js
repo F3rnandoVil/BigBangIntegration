@@ -30,5 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function confirmarPago() {
-    window.location.href = '/pagoTarjeta.html';
+    window.location.href = '/pagos/pagoTarjeta.html';
 }

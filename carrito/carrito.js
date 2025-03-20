@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.proceedToCheckout = function() {
         // Guarda los datos actuales en localStorage antes de ir al pago
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        window.location.href = "/pagoVista.html";
+        window.location.href = "../pagos/pagoVista.html";
     };
 
     renderCartItems();
