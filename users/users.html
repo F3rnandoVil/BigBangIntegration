@@ -3,17 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Pago</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
+    <title>Datos del Usuario</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/catalogos/styles.css">
+    <style> 
+
         .container {
             max-width: 400px;
             width: 100%;
@@ -21,6 +16,7 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 8px;
+            margin: 100px auto;
         }
         h2 {
             text-align: center;
@@ -37,29 +33,15 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        button {
-            background-color: #1976D2;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #1565C0;
-        }
+
+
     </style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/catalogos/styles.css">
 </head>
 <body>
     <!-- Header with navigation -->
     <header>
         <div class="nav-container">
-          <a href="/catalogos/front.html" class="logo">E-Shop<span>.</span></a>
+            <a href="/catalogos/front.html" class="logo">E-Shop<span>.</span></a>
             <nav>
                 <ul>
                     <li>
@@ -87,28 +69,10 @@
     </header>
 
     <div class="container">
-        <h2>Información de Pago</h2>
-        <form id="paymentForm">
-            <label for="cardNumber">Número de Tarjeta</label>
-            <input type="text" id="cardNumber" name="cardNumber" required>
-
-            <label for="expiryDate">Fecha de Expiración (MM/YY)</label>
-            <input type="text" id="expiryDate" name="expiryDate" required>
-
-            <label for="cvv">CVV</label>
-            <input type="text" id="cvv" name="cvv" required>
-
-            <label for="cardholderName">Nombre del Titular</label>
-            <input type="text" id="cardholderName" name="cardholderName" required>
-
-            <div class="checkbox-container">
-                <input type="checkbox" id="saveCard" name="saveCard">
-                <label for="saveCard">Guardar información de la tarjeta</label>
-            </div>
-
-            <button type="submit">Pagar</button>
-        </form>
+        <h2>Datos del Usuario</h2>
+        <div id="userDetails"></div>
+        <button id="logout">Cerrar Sesión</button>
     </div>
-    <script src="pagoTarjeta.js"></script>
+    <script src="users.js"></script>
 </body>
 </html>

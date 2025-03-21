@@ -185,6 +185,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     cartCount++;
                     cartBadge.textContent = cartCount;
     
+                    // Add product to cart in localStorage
+                    addToCart(product);
+    
                     // Re-render products to show updated stock
                     renderProducts();
     
@@ -197,7 +200,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-
+    function addToCart(product) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const existingProduct = cartItems.find(item => item.id === product.id);
+    
+        if (existingProduct) {
+            existingProduct.cantidad++;
+        } else {
+            cartItems.push({ ...product, cantidad: 1 });
+        }
+    
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+    
     const categories = document.querySelectorAll('.category');
     categories.forEach(category => {
         category.addEventListener('click', function() {

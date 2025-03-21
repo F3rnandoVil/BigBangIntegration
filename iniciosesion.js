@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const logoutBtn = document.getElementById("logout");
     const usernameDisplay = document.getElementById("username");
 
+    // Cuentas preestablecidas
+    const predefinedUsers = {
+        admin: { password: "root", role: "admin" },
+        vendedor: { password: "123", role: "vendedor" }
+    };
+
     // Registro de usuario
     if (registerForm) {
         registerForm.addEventListener("submit", (e) => {
@@ -15,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (localStorage.getItem(username)) {
                 message.textContent = "⚠️ Usuario ya registrado";
             } else {
-                localStorage.setItem(username, password);
+                const userData = { password, role: "usuario" };
+                localStorage.setItem(username, JSON.stringify(userData));
                 message.textContent = "✅ Usuario registrado con éxito";
                 setTimeout(() => {
                     window.location.href = "login.html";
@@ -31,9 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const username = document.getElementById("loginUser").value;
             const password = document.getElementById("loginPass").value;
 
-            if (localStorage.getItem(username) === password) {
+            const userData = predefinedUsers[username] || JSON.parse(localStorage.getItem(username));
+            if (userData && userData.password === password) {
                 localStorage.setItem("loggedInUser", username);
-                window.location.href = "dashboard.html";
+                localStorage.setItem("userRole", userData.role);
+                window.location.href = "/catalogos/front.html";
             } else {
                 message.textContent = "❌ Usuario o contraseña incorrectos";
             }
@@ -54,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (logoutBtn) {
         logoutBtn.addEventListener("click", () => {
             localStorage.removeItem("loggedInUser");
+            localStorage.removeItem("userRole");
             window.location.href = "index.html";
         });
     }

@@ -5,9 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/catalogos/styles.css">
     <script src="carrito.js" defer></script>
 </head>
 <body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/catalogos/front.html" class="logo">E-Shop<span>.</span></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/users/users.html" class="nav-icon">
+                            <i class="fas fa-user"></i>
+                            <span>Usuario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/carrito/carrito.html" class="nav-icon" style="position: relative;">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Carrito</span>
+                            <div class="cart-badge" id="cartBadge">0</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pagos/pagoVista.html" class="nav-icon">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Pagos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
         <div class="cart">
             <div class="cart-header">

@@ -1,26 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cartItemsContainer = document.getElementById('cart-items');
 
-    const cartItems = [
-        {
-            producto: 'Producto 1',
-            descripcion: 'Descripción del Producto 1',
-            cantidad: 1,
-            precio: 10.00
-        },
-        {
-            producto: 'Producto 2',
-            descripcion: 'Descripción del Producto 2',
-            cantidad: 2,
-            precio: 20.00
-        },
-        {
-            producto: 'Producto 3',
-            descripcion: 'Descripción del Producto 3',
-            cantidad: 1,
-            precio: 30.00
-        }
-    ];
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
     function renderCartItems() {
         cartItemsContainer.innerHTML = '';
@@ -45,23 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.increaseQuantity = function(index) {
         cartItems[index].cantidad += 1;
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
         renderCartItems();
     };
 
     window.decreaseQuantity = function(index) {
         if (cartItems[index].cantidad > 1) {
             cartItems[index].cantidad -= 1;
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
             renderCartItems();
         }
     };
 
     window.removeItem = function(index) {
         cartItems.splice(index, 1);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
         renderCartItems();
-    };
-
-    window.proceedToCheckout = function() {
-        alert('Procediendo al pago...');
     };
 
     window.proceedToCheckout = function() {

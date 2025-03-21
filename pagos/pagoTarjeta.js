@@ -52,5 +52,5 @@ document.getElementById('paymentForm').addEventListener('submit', function(event
 
     console.log('Datos de pago:', paymentData);
     alert('Pago procesado con éxito');
-    window.location.href = '/productos.html';
+    window.location.href = '/catalogos/front.html';
 });
