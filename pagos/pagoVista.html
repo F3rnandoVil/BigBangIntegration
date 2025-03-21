@@ -10,8 +10,9 @@
         th, td { padding: 10px; text-align: center; border: 1px solid #ddd; }
         .total { font-weight: bold; }
     </style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="/catalogos/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/catalogos/styles.css">
+    <link rel="stylesheet" href="pagoVista.css">
 </head>
 <body>
     <!-- Header with navigation -->
@@ -43,37 +44,38 @@
             </nav>
         </div>
     </header>
-
-    <h2>Resumen de tu compra</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Producto</th>
-                <th>Descripción</th>
-                <th>Cantidad</th>
-                <th>Precio unitario</th>
-                <th>Subtotal</th>
-            </tr>
-        </thead>
-        <tbody id="resumen-items"></tbody>
-        <tfoot>
-            <tr>
-                <td colspan="4" class="total">Subtotal</td>
-                <td id="subtotal"></td>
-            </tr>
-            <tr>
-                <td colspan="4" class="total">IVA (16%)</td>
-                <td id="iva"></td>
-            </tr>
-            <tr>
-                <td colspan="4" class="total">Total</td>
-                <td id="total"></td>
-            </tr>
-        </tfoot>
-    </table>
-
-    <button onclick="confirmarPago()">Proceder al Pago</button>
-
+    <div class="main-content">
+        <div class="container">
+            <h2>Resumen de tu compra</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="resumen-items"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="total">Subtotal</td>
+                        <td id="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="total">IVA (16%)</td>
+                        <td id="iva"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="total">Total</td>
+                        <td id="total"></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button onclick="confirmarPago()">Proceder al Pago</button>
+        </div>
+    </div>
     <script src="pagoVista.js"></script>
 </body>
 </html>

@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+header {
+    width: 100%;
+}
 .container {
     width: 80%;
     margin: auto;

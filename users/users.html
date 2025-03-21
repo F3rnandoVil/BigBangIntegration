@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/catalogos/styles.css">
-    <style> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            background-color: white; /* Asegúrate de que el encabezado tenga un fondo */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añadir sombra para separar visualmente del contenido */
+            position: fixed; /* Fijar el encabezado en la parte superior */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Asegurar que el encabezado esté por encima del contenido */
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px; /* Añadir margen superior para evitar que el contenido se superponga con el encabezado */
+            width: 100%; /* Asegurar que el contenido ocupe todo el ancho disponible */
+        }
 
         .container {
             max-width: 400px;
@@ -16,16 +43,19 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 8px;
-            margin: 100px auto;
+            margin: 20px; /* Añadir margen para separar del borde de la pantalla */
         }
+
         h2 {
             text-align: center;
             margin-bottom: 20px;
         }
+
         label {
             display: block;
             margin: 10px 0 5px;
         }
+
         input[type="text"], button {
             width: 100%;
             padding: 10px;
@@ -33,8 +63,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
-
     </style>
 </head>
 <body>
@@ -68,10 +96,12 @@
         </div>
     </header>
 
-    <div class="container">
-        <h2>Datos del Usuario</h2>
-        <div id="userDetails"></div>
-        <button id="logout">Cerrar Sesión</button>
+    <div class="main-content">
+        <div class="container">
+            <h2>Datos del Usuario</h2>
+            <div id="userDetails"></div>
+            <button id="logout">Cerrar Sesión</button>
+        </div>
     </div>
     <script src="users.js"></script>
 </body>
