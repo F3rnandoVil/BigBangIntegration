@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <!-- External Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/catalogos/front.html" class="logo">E-Shop<span>.</span></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/users/users.html" class="nav-icon">
+                            <i class="fas fa-user"></i>
+                            <span>Usuario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/carrito/carrito.html" class="nav-icon" style="position: relative;">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Carrito</span>
+                            <div class="cart-badge" id="cartBadge">0</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pagos/pagoVista.html" class="nav-icon">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Pagos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search bar section -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <!-- Category filters -->
+    <div class="categories">
+        <div class="category active">Todos</div>
+        <div class="category">Bebidas</div>
+        <div class="category">Comida</div>
+        <div class="category">Postres</div>
+    </div>
+
+    <!-- Main content area -->
+    <main>
+        <h2 class="section-title">Productos Destacados</h2>
+        
+        <div class="products-grid">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Newsletter subscription section -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <p>Recibe las últimas novedades, ofertas exclusivas y consejos de estilo directamente en tu correo.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico">
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer with site information -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Sobre Nosotros</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Nuestra Historia</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ayuda</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Estado del Pedido</a></li>
+                    <li><a href="#">Opciones de Pago</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tiendas</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Localizador de Tiendas</a></li>
+                    <li><a href="#">Colima</a></li>
+                    <li><a href="#">Comala</a></li>
+                    <li><a href="#">Tecomán</a></li>
+                    <li><a href="#">Manzanillo</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="#">fvillasenor@ucol.mx</a></li>
+                    <li><a href="#">hanzeel@ucol.mx</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Link to our JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
