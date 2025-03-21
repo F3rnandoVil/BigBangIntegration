@@ -9,6 +9,7 @@ In this repository, the entire classroom will work cohesively on a system.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
+- [Contributors](#contributors)
 
 ## Project Overview
 
@@ -33,3 +34,6 @@ To run the project, use live server or open the index locally
 ## Contact
 
 For questions or support, please contact me info on my profile
+
+## Contributors
+I worked on this project f3rnandovil on github
