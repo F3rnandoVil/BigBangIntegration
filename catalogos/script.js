@@ -190,9 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
                     // Re-render products to show updated stock
                     renderProducts();
-    
-                    // Optionally, you can show an alert or update the UI to notify the user
-                    alert(`${product.producto} added to cart. ${product.cantidad} left.`);
                 } else {
                     alert(`Sorry, no more stock of ${product.producto} available.`);
                 }
