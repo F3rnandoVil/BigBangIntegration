@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #1976D2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1565C0;
+        }
+    </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/catalogos/styles.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="nav-container">
+          <a href="/catalogos/front.html" class="logo">E-Shop<span>.</span></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/users/users.html" class="nav-icon">
+                            <i class="fas fa-user"></i>
+                            <span>Usuario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/carrito/carrito.html" class="nav-icon" style="position: relative;">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Carrito</span>
+                            <div class="cart-badge" id="cartBadge">0</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pagos/pagoVista.html" class="nav-icon">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Pagos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Información de Pago</h2>
+        <form id="paymentForm">
+            <label for="cardNumber">Número de Tarjeta</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+
+            <label for="expiryDate">Fecha de Expiración (MM/YY)</label>
+            <input type="text" id="expiryDate" name="expiryDate" required>
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <label for="cardholderName">Nombre del Titular</label>
+            <input type="text" id="cardholderName" name="cardholderName" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="saveCard" name="saveCard">
+                <label for="saveCard">Guardar información de la tarjeta</label>
+            </div>
+
+            <button type="submit">Pagar</button>
+        </form>
+    </div>
+    <script src="pagoTarjeta.js"></script>
+</body>
+</html>

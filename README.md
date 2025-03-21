@@ -32,4 +32,4 @@ To run the project, use live server or open the index locally
 
 ## Contact
 
-For questions or support, please contact me info on my prrofile
+For questions or support, please contact me info on my profile

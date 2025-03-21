@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Usuario</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/catalogos/styles.css">
+    <style> 
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin: 100px auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/catalogos/front.html" class="logo">E-Shop<span>.</span></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/users/users.html" class="nav-icon">
+                            <i class="fas fa-user"></i>
+                            <span>Usuario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/carrito/carrito.html" class="nav-icon" style="position: relative;">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Carrito</span>
+                            <div class="cart-badge" id="cartBadge">0</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pagos/pagoVista.html" class="nav-icon">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Pagos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Datos del Usuario</h2>
+        <div id="userDetails"></div>
+        <button id="logout">Cerrar Sesión</button>
+    </div>
+    <script src="users.js"></script>
+</body>
+</html>
