@@ -1,4 +1,6 @@
-document.getElementById('paymentForm').addEventListener('submit', function(event) {
+import { luhn } from './utils/luhn.js';
+
+document.getElementById('paymentForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const cardNumber = document.getElementById('cardNumber').value;
@@ -11,6 +13,12 @@ document.getElementById('paymentForm').addEventListener('submit', function(event
     if (!cardNumberRegex.test(cardNumber)) {
       alert('El número de tarjeta debe tener exactamente 16 dígitos.');
       return;
+    } else {
+      // Validación Luhn
+      if (!luhn(cardNumber)) {
+        alert('El número de tarjeta no es válido.');
+        return;
+      }
     }
 
     // Validación nombre del titular (solo letras)
