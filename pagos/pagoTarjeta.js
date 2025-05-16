@@ -36,7 +36,8 @@ document.getElementById('paymentForm').addEventListener('submit', function (even
     }
 
     const [month, year] = expiryDate.split('/');
-    const expiry = new Date(`${year}-${month}`);
+    const fullYear = parseInt('20' + year, 10); // Convierte '25' en 2025
+    const expiry = new Date(fullYear, parseInt(month, 10), 0, 23, 59, 59); // Último día del mes
     const now = new Date();
     if (expiry < now) {
       alert('La tarjeta ha expirado.');
